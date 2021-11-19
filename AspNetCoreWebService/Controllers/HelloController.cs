@@ -22,13 +22,6 @@ namespace AspNetCoreWebService.Controllers
         {
             return Json(new Response(string.Format(MESSAGE_FORMAT, name)));
         }
-        
-        [Fact]
-        public void NoInputParamGetResponseTest()
-        {
-            HelloController controller = new HelloController();
-            var response = controller.Get().Value as Response;
-            Assert.Equal("Hello World!", response.output);
-        }        
+              
     }
 }
